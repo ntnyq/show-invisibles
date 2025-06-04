@@ -2,7 +2,7 @@
   "name": "show-invisibles",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.11.0",
+  "packageManager": "pnpm@10.11.1",
   "description": "Converts invisible characters to a commonly recognizable visible form",
   "keywords": [
     "convert",
@@ -23,12 +23,12 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./dist/index.d.mts",
-      "default": "./dist/index.mjs"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     }
   },
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -37,8 +37,8 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --watch",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "lint": "eslint",
     "prepare": "husky",
     "prepublishOnly": "pnpm run build",
@@ -50,24 +50,19 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^4.3.0",
+    "@ntnyq/eslint-config": "^5.0.0-beta.5",
     "@ntnyq/prettier-config": "^2.2.0",
-    "@types/node": "^22.15.29",
     "bumpp": "^10.1.1",
     "eslint": "^9.28.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^8.0.4",
     "prettier": "^3.5.3",
+    "tsdown": "^0.12.6",
     "typescript": "^5.8.3",
-    "unbuild": "^3.5.0",
-    "vitest": "^3.1.4"
-  },
-  "engines": {
-    "node": ">=18.18.0"
+    "vitest": "^3.2.1"
   },
   "nano-staged": {
-    "*.{js,ts,mjs,cjs,md,vue,yml,yaml,toml,json}": "eslint --fix",
-    "*.{css,scss,html}": "prettier -uw"
+    "*.{js,ts,mjs,cjs,md,yml,yaml,toml,json}": "eslint --fix"
   }
 }

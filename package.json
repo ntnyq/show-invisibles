@@ -2,7 +2,7 @@
   "name": "show-invisibles",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.12.2",
   "description": "Converts invisible characters to a commonly recognizable visible form",
   "keywords": [
     "convert",
@@ -50,17 +50,17 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^5.0.0-beta.6",
+    "@ntnyq/eslint-config": "^5.0.0-beta.8",
     "@ntnyq/prettier-config": "^2.2.0",
-    "bumpp": "^10.1.1",
+    "bumpp": "^10.2.0",
     "eslint": "^9.29.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^8.0.4",
-    "prettier": "^3.5.3",
-    "tsdown": "^0.12.7",
+    "prettier": "^3.6.0",
+    "tsdown": "^0.12.8",
     "typescript": "^5.8.3",
-    "vitest": "^3.2.3"
+    "vitest": "^3.2.4"
   },
   "nano-staged": {
     "*.{js,ts,mjs,cjs,md,yml,yaml,toml,json}": "eslint --fix"

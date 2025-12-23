@@ -2,7 +2,7 @@
   "name": "show-invisibles",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.26.1",
   "description": "Converts invisible characters to a commonly recognizable visible form",
   "keywords": [
     "convert",
@@ -45,21 +45,21 @@
     "release": "run-s release:check release:version",
     "release:check": "run-s lint typecheck test",
     "release:version": "bumpp",
-    "test": "vitest --typecheck",
+    "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^5.6.0",
+    "@ntnyq/eslint-config": "^5.8.0",
     "@ntnyq/prettier-config": "^3.0.1",
-    "bumpp": "^10.2.3",
-    "eslint": "^9.36.0",
+    "bumpp": "^10.3.2",
+    "eslint": "^9.39.2",
     "husky": "^9.1.7",
-    "nano-staged": "^0.8.0",
+    "nano-staged": "^0.9.0",
     "npm-run-all2": "^8.0.4",
-    "prettier": "^3.6.2",
-    "tsdown": "^0.15.5",
-    "typescript": "^5.9.2",
-    "vitest": "^3.2.4"
+    "prettier": "^3.7.4",
+    "tsdown": "^0.18.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
   },
   "nano-staged": {
     "*.{js,ts,mjs,cjs,md,yml,yaml,toml,json}": "eslint --fix"
